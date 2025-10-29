@@ -4,6 +4,7 @@ import java.util.List;
 //takes user input and formats it into the UI
 public class Format {
 List<String> testList = new ArrayList<>();
+ArrayList<List<String>> testArrayList = new ArrayList<>();
 
     //Example array to test class
     public void testMethod(List<String> testList) {
@@ -31,7 +32,7 @@ List<String> testList = new ArrayList<>();
         List<String> friday = new ArrayList<>();
         List<String> saturday = new ArrayList<>();
         List<String> sunday = new ArrayList<>();
-        
+
         //checks to see what day it is ands adds task and time to that day
         switch (testList.get(0)) {
             case "Monday" -> {
@@ -92,7 +93,7 @@ List<String> testList = new ArrayList<>();
     }
 
     //main method
-    public ArrayList<List<String>> formatOutput(List<String> testList, ArrayList<List<String>> testArrayList) {
+    public ArrayList<List<String>> formatOutput() {
         errorHandling(testList);
         stringFormat(testList, testArrayList);
 

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="549.0" prefWidth="653.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs.TaskListController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="Task List Creator" />
+    <Separator prefHeight="34.0" prefWidth="457.0" />
+    <Label text="Input Task" />
+    <TextField fx:id="taskTextField" />
+    <Label text="Day and Time" />
+    <HBox prefHeight="25.0" prefWidth="457.0">
+        <children>
+            <ChoiceBox id="dayChoice" fx:id="dayChoicebox" prefHeight="25.0" prefWidth="257.0" />
+            <ChoiceBox id="hourChoice" fx:id="hourChoicebox" prefHeight="25.0" prefWidth="264.0" />
+            <ChoiceBox id="minute" fx:id="minuteChoicebox" prefHeight="25.0" prefWidth="251.0" />
+        </children>
+    </HBox>
+    <BorderPane prefHeight="54.0" prefWidth="327.0">
+        <right>
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearList" prefHeight="25.0" prefWidth="220.0" text="Clear List" BorderPane.alignment="CENTER" />
+        </right>
+        <left>
+            <Button fx:id="inputButton" mnemonicParsing="false" onAction="#printInput" prefHeight="25.0" prefWidth="212.0" text="Enter Input" BorderPane.alignment="CENTER" />
+        </left>
+    </BorderPane>
+    <Separator prefHeight="48.0" prefWidth="613.0" />
+    <Pane prefHeight="200.0" prefWidth="200.0">
+        <children>
+            <Label fx:id="taskListArea" layoutX="293.0" layoutY="14.0" text="List Here" />
+        </children>
+    </Pane>
+    <Button fx:id="screenshotButton" onAction="#listScreenshot" text="Screenshot" />
+</VBox>
